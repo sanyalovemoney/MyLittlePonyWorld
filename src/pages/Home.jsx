@@ -7,28 +7,32 @@ import { ContactForm } from "../components/ContactForm.jsx";
 export function Home({ onNavigate }) {
   return (
     <>
-      <section className="hero" id="home">
-        <div className="container wrap">
-          <div>
-            <div className="chip">Фан-світ My Little Pony</div>
-            <h1>Твій власний чарівний всесвіт поні</h1>
-            <p>
-              Додавай своїх персонажів, ділися історіями та зберігай
-              моменти дружби в одній затишній галереї.
-            </p>
-            <div className="buttons">
-              <button className="cta" onClick={() => onNavigate?.("ponies")}>
-                Наші поні
-              </button>
-              <button className="btn" onClick={() => onNavigate?.("gallery")}>
-                Переглянути галерею
-              </button>
-            </div>
-          </div>
+    <section className="hero" id="home">
+  <div className="hero-inner">
+    <div className="container">
+      <div className="hero-grid">
+        <div className="hero-text">
+          <div className="chip">Фан-світ My Little Pony</div>
+          <h1>Твій власний чарівний всесвіт поні</h1>
+          <p>
+            Додавай своїх персонажів, ділися історіями та зберігай
+            моменти дружби в одній затишній галереї.
+          </p>
 
+          <div className="buttons">
+            <button className="cta">Наші поні</button>
+            <button className="btn">Переглянути галерею</button>
+          </div>
+        </div>
+
+        <div className="hero-visual">
           <div className="pony-blob" />
         </div>
-      </section>
+      </div>
+    </div>
+  </div>
+</section>
+
 
       <section className="section" id="ponies">
         <div className="container">

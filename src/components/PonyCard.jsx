@@ -15,9 +15,6 @@ export function PonyCard({ pony }) {
           </div>
         )}
         {pony.desc && <p>{pony.desc}</p>}
-        <div className="actions">
-          <button className="btn">Детальніше</button>
-        </div>
       </div>
     </article>
   );
