@@ -14,13 +14,6 @@ if (contactForm) {
     contactStatus.textContent = 'Відправляємо...';
     contactStatus.style.color = 'black';
 
-    try {
-      const res = await fetch('http://localhost:3000/api/contact', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(data),
-      });
-
       if (res.ok) {
         contactStatus.textContent = 'Повідомлення надіслано ';
         contactStatus.style.color = 'green';
@@ -29,10 +22,5 @@ if (contactForm) {
         contactStatus.textContent = 'Помилка при відправці. Спробуй ще раз.';
         contactStatus.style.color = 'red';
       }
-    } catch (err) {
-      console.error(err);
-      contactStatus.textContent = 'Немає з’єднання з сервером :(';
-      contactStatus.style.color = 'red';
-    }
   });
 }
